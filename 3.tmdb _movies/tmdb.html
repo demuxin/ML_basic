@@ -1,0 +1,1187 @@
+<!DOCTYPE html>
+<!-- saved from url=(0071)https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent -->
+<html lang="zh-cmn-Hans"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="robots" content="noindex,nofollow">
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,minimum-scale=1,user-scalable=no">
+  <title>tmdb - Kesci.com</title>
+  <link href="https://www.kesci.com/shared/images/favicon.ico" type="image/x-icon" rel="shortcut icon">
+  <link href="./tmdb_files/styles.css" rel="stylesheet">
+  <link href="./tmdb_files/notebook.css" rel="stylesheet">
+  <style type="text/css">
+    @font-face {
+      font-family: 'Source Code Pro';
+      font-style: normal;
+      font-weight: 400;
+      src: local('Source Code Pro'), local('SourceCodePro-Regular'), url('//cdn.kesci.com/fonts/mrl8jkM18OlOQN8JLgasDxM0YzuT7MdOe03otPbuUS0.woff') format('woff'), url('//cdn.kesci.com/fonts/mrl8jkM18OlOQN8JLgasD9V_2ngZ8dMf8fLgjYEouxg.woff2') format('woff2');
+    }
+
+    body.nbviewer {
+      font-family: "Helvetica Neue","Helvetica","PingFang SC","Hiragino Sans GB","Microsoft YaHei","\\5FAE\8F6F\96C5\9ED1",Arial,sans-serif;
+      padding-top: 0;
+      width: 100vw;
+      line-height: 1.5;
+    }
+
+    div.container-main {
+      min-height: 0
+    }
+    div.container-main.container-fluid {
+      padding: 0;
+      width: 100%;
+    }
+    .CodeMirror,.prompt,div.input_area,div.output_text {
+      line-height: inherit;
+    }
+
+    .CodeMirror, pre,.prompt {
+      font-family: 'Source Code Pro', monospace !important;
+    }
+
+    div.input_prompt {
+      color: #5a5a5a;
+      /*border-right: 1px solid #ddd;*/
+    }
+    div.cell {
+      /*border: 1px solid #ddd;*/
+      padding: 5px 0;
+      border-radius: 2px;
+      margin-bottom: 20px;
+      padding-top: 0;
+      padding-bottom: 0;
+      padding-right: 0;
+    }
+    .prompt {
+      text-align: left;
+    }
+    div.input_area, div.output_area, div.input, div.output,div.text_cell {
+      display: block;
+    }
+    div.input_area {
+      border-radius: 0;
+      border:none;
+      background: #f8f8f8;
+      padding: 5px;
+    }
+    div.output_subarea  {
+      padding: 10px 5px;
+      width: 100%;
+      max-width: 100%;
+    }
+    pre {
+      width: 100%;
+      overflow-x: auto;
+    }
+    .rendered_html blockquote,
+    .rendered_html pre {
+      margin: 0;
+    }
+  </style>
+  <script src="./tmdb_files/MathJax.js.下载" type="text/javascript"></script>
+
+  <script type="text/javascript">
+    init_mathjax = function () {
+      if (window.MathJax) {
+        // MathJax loaded
+        MathJax.Hub.Config({
+          TeX: {
+            equationNumbers: {
+              autoNumber: "AMS",
+              useLabelIds: true
+            }
+          },
+          tex2jax: {
+            inlineMath: [['$', '$'], ["\\(", "\\)"], ['~$', '~$']],
+            displayMath: [['$$', '$$'], ["\\[", "\\]"]],
+            processEscapes: true,
+            processEnvironments: true
+          },
+          displayAlign: 'center',
+          showProcessingMessages: false,
+          messageStyle: "none",
+          "SVG": {
+            styles: {'.MathJax_SVG_Display': {"margin": 0}},
+            linebreaks: {automatic: true}
+          }
+        });
+        MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
+      }
+    }
+    init_mathjax();
+  </script>
+<!-- These are loaded at the top of the body so they are available to
+notebook cells when they are loaded below. -->
+<script src="./tmdb_files/jquery.min.js.下载"></script>
+<script src="./tmdb_files/require.js.下载"></script>
+<script src="./tmdb_files/moment.min.js.下载"></script>
+<style type="text/css">.MathJax_Hover_Frame {border-radius: .25em; -webkit-border-radius: .25em; -moz-border-radius: .25em; -khtml-border-radius: .25em; box-shadow: 0px 0px 15px #83A; -webkit-box-shadow: 0px 0px 15px #83A; -moz-box-shadow: 0px 0px 15px #83A; -khtml-box-shadow: 0px 0px 15px #83A; border: 1px solid #A6D ! important; display: inline-block; position: absolute}
+.MathJax_Menu_Button .MathJax_Hover_Arrow {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 4px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -khtml-border-radius: 4px; font-family: 'Courier New',Courier; font-size: 9px; color: #F0F0F0}
+.MathJax_Menu_Button .MathJax_Hover_Arrow span {display: block; background-color: #AAA; border: 1px solid; border-radius: 3px; line-height: 0; padding: 4px}
+.MathJax_Hover_Arrow:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_Hover_Arrow:hover span {background-color: #CCC!important}
+</style><style type="text/css">#MathJax_About {position: fixed; left: 50%; width: auto; text-align: center; border: 3px outset; padding: 1em 2em; background-color: #DDDDDD; color: black; cursor: default; font-family: message-box; font-size: 120%; font-style: normal; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; border-radius: 15px; -webkit-border-radius: 15px; -moz-border-radius: 15px; -khtml-border-radius: 15px; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_About.MathJax_MousePost {outline: none}
+.MathJax_Menu {position: absolute; background-color: white; color: black; width: auto; padding: 2px; border: 1px solid #CCCCCC; margin: 0; cursor: default; font: menu; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; z-index: 201; box-shadow: 0px 10px 20px #808080; -webkit-box-shadow: 0px 10px 20px #808080; -moz-box-shadow: 0px 10px 20px #808080; -khtml-box-shadow: 0px 10px 20px #808080; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+.MathJax_MenuItem {padding: 2px 2em; background: transparent}
+.MathJax_MenuArrow {position: absolute; right: .5em; padding-top: .25em; color: #666666; font-size: .75em}
+.MathJax_MenuActive .MathJax_MenuArrow {color: white}
+.MathJax_MenuArrow.RTL {left: .5em; right: auto}
+.MathJax_MenuCheck {position: absolute; left: .7em}
+.MathJax_MenuCheck.RTL {right: .7em; left: auto}
+.MathJax_MenuRadioCheck {position: absolute; left: 1em}
+.MathJax_MenuRadioCheck.RTL {right: 1em; left: auto}
+.MathJax_MenuLabel {padding: 2px 2em 4px 1.33em; font-style: italic}
+.MathJax_MenuRule {border-top: 1px solid #CCCCCC; margin: 4px 1px 0px}
+.MathJax_MenuDisabled {color: GrayText}
+.MathJax_MenuActive {background-color: Highlight; color: HighlightText}
+.MathJax_MenuDisabled:focus, .MathJax_MenuLabel:focus {background-color: #E8E8E8}
+.MathJax_ContextMenu:focus {outline: none}
+.MathJax_ContextMenu .MathJax_MenuItem:focus {outline: none}
+#MathJax_AboutClose {top: .2em; right: .2em}
+.MathJax_Menu .MathJax_MenuClose {top: -10px; left: -10px}
+.MathJax_MenuClose {position: absolute; cursor: pointer; display: inline-block; border: 2px solid #AAA; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; font-family: 'Courier New',Courier; font-size: 24px; color: #F0F0F0}
+.MathJax_MenuClose span {display: block; background-color: #AAA; border: 1.5px solid; border-radius: 18px; -webkit-border-radius: 18px; -moz-border-radius: 18px; -khtml-border-radius: 18px; line-height: 0; padding: 8px 0 6px}
+.MathJax_MenuClose:hover {color: white!important; border: 2px solid #CCC!important}
+.MathJax_MenuClose:hover span {background-color: #CCC!important}
+.MathJax_MenuClose:hover:focus {outline: none}
+</style><style type="text/css">.MathJax_Preview .MJXf-math {color: inherit!important}
+</style><style type="text/css">.MJX_Assistive_MathML {position: absolute!important; top: 0; left: 0; clip: rect(1px, 1px, 1px, 1px); padding: 1px 0 0 0!important; border: 0!important; height: 1px!important; width: 1px!important; overflow: hidden!important; display: block!important; -webkit-touch-callout: none; -webkit-user-select: none; -khtml-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none}
+.MJX_Assistive_MathML.MJX_Assistive_MathML_Block {width: 100%!important}
+</style><style type="text/css">#MathJax_Zoom {position: absolute; background-color: #F0F0F0; overflow: auto; display: block; z-index: 301; padding: .5em; border: 1px solid black; margin: 0; font-weight: normal; font-style: normal; text-align: left; text-indent: 0; text-transform: none; line-height: normal; letter-spacing: normal; word-spacing: normal; word-wrap: normal; white-space: nowrap; float: none; -webkit-box-sizing: content-box; -moz-box-sizing: content-box; box-sizing: content-box; box-shadow: 5px 5px 15px #AAAAAA; -webkit-box-shadow: 5px 5px 15px #AAAAAA; -moz-box-shadow: 5px 5px 15px #AAAAAA; -khtml-box-shadow: 5px 5px 15px #AAAAAA; filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=2, OffY=2, Color='gray', Positive='true')}
+#MathJax_ZoomOverlay {position: absolute; left: 0; top: 0; z-index: 300; display: inline-block; width: 100%; height: 100%; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+#MathJax_ZoomFrame {position: relative; display: inline-block; height: 0; width: 0}
+#MathJax_ZoomEventTrap {position: absolute; left: 0; top: 0; z-index: 302; display: inline-block; border: 0; padding: 0; margin: 0; background-color: white; opacity: 0; filter: alpha(opacity=0)}
+</style><style type="text/css">.MathJax_Preview {color: #888}
+#MathJax_Message {position: fixed; left: 1em; bottom: 1.5em; background-color: #E6E6E6; border: 1px solid #959595; margin: 0px; padding: 2px 8px; z-index: 102; color: black; font-size: 80%; width: auto; white-space: nowrap}
+#MathJax_MSIE_Frame {position: absolute; top: 0; left: 0; width: 0px; z-index: 101; border: 0px; margin: 0px; padding: 0px}
+.MathJax_Error {color: #CC0000; font-style: italic}
+</style><style type="text/css">.MJXp-script {font-size: .8em}
+.MJXp-right {-webkit-transform-origin: right; -moz-transform-origin: right; -ms-transform-origin: right; -o-transform-origin: right; transform-origin: right}
+.MJXp-bold {font-weight: bold}
+.MJXp-italic {font-style: italic}
+.MJXp-scr {font-family: MathJax_Script,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-frak {font-family: MathJax_Fraktur,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-sf {font-family: MathJax_SansSerif,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-cal {font-family: MathJax_Caligraphic,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-mono {font-family: MathJax_Typewriter,'Times New Roman',Times,STIXGeneral,serif}
+.MJXp-largeop {font-size: 150%}
+.MJXp-largeop.MJXp-int {vertical-align: -.2em}
+.MJXp-math {display: inline-block; line-height: 1.2; text-indent: 0; font-family: 'Times New Roman',Times,STIXGeneral,serif; white-space: nowrap; border-collapse: collapse}
+.MJXp-display {display: block; text-align: center; margin: 1em 0}
+.MJXp-math span {display: inline-block}
+.MJXp-box {display: block!important; text-align: center}
+.MJXp-box:after {content: " "}
+.MJXp-rule {display: block!important; margin-top: .1em}
+.MJXp-char {display: block!important}
+.MJXp-mo {margin: 0 .15em}
+.MJXp-mfrac {margin: 0 .125em; vertical-align: .25em}
+.MJXp-denom {display: inline-table!important; width: 100%}
+.MJXp-denom > * {display: table-row!important}
+.MJXp-surd {vertical-align: top}
+.MJXp-surd > * {display: block!important}
+.MJXp-script-box > *  {display: table!important; height: 50%}
+.MJXp-script-box > * > * {display: table-cell!important; vertical-align: top}
+.MJXp-script-box > *:last-child > * {vertical-align: bottom}
+.MJXp-script-box > * > * > * {display: block!important}
+.MJXp-mphantom {visibility: hidden}
+.MJXp-munderover {display: inline-table!important}
+.MJXp-over {display: inline-block!important; text-align: center}
+.MJXp-over > * {display: block!important}
+.MJXp-munderover > * {display: table-row!important}
+.MJXp-mtable {vertical-align: .25em; margin: 0 .125em}
+.MJXp-mtable > * {display: inline-table!important; vertical-align: middle}
+.MJXp-mtr {display: table-row!important}
+.MJXp-mtd {display: table-cell!important; text-align: center; padding: .5em 0 0 .5em}
+.MJXp-mtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-mlabeledtr {display: table-row!important}
+.MJXp-mlabeledtr > .MJXp-mtd:first-child {padding-left: 0}
+.MJXp-mlabeledtr:first-child > .MJXp-mtd {padding-top: 0}
+.MJXp-merror {background-color: #FFFF88; color: #CC0000; border: 1px solid #CC0000; padding: 1px 3px; font-style: normal; font-size: 90%}
+.MJXp-scale0 {-webkit-transform: scaleX(.0); -moz-transform: scaleX(.0); -ms-transform: scaleX(.0); -o-transform: scaleX(.0); transform: scaleX(.0)}
+.MJXp-scale1 {-webkit-transform: scaleX(.1); -moz-transform: scaleX(.1); -ms-transform: scaleX(.1); -o-transform: scaleX(.1); transform: scaleX(.1)}
+.MJXp-scale2 {-webkit-transform: scaleX(.2); -moz-transform: scaleX(.2); -ms-transform: scaleX(.2); -o-transform: scaleX(.2); transform: scaleX(.2)}
+.MJXp-scale3 {-webkit-transform: scaleX(.3); -moz-transform: scaleX(.3); -ms-transform: scaleX(.3); -o-transform: scaleX(.3); transform: scaleX(.3)}
+.MJXp-scale4 {-webkit-transform: scaleX(.4); -moz-transform: scaleX(.4); -ms-transform: scaleX(.4); -o-transform: scaleX(.4); transform: scaleX(.4)}
+.MJXp-scale5 {-webkit-transform: scaleX(.5); -moz-transform: scaleX(.5); -ms-transform: scaleX(.5); -o-transform: scaleX(.5); transform: scaleX(.5)}
+.MJXp-scale6 {-webkit-transform: scaleX(.6); -moz-transform: scaleX(.6); -ms-transform: scaleX(.6); -o-transform: scaleX(.6); transform: scaleX(.6)}
+.MJXp-scale7 {-webkit-transform: scaleX(.7); -moz-transform: scaleX(.7); -ms-transform: scaleX(.7); -o-transform: scaleX(.7); transform: scaleX(.7)}
+.MJXp-scale8 {-webkit-transform: scaleX(.8); -moz-transform: scaleX(.8); -ms-transform: scaleX(.8); -o-transform: scaleX(.8); transform: scaleX(.8)}
+.MJXp-scale9 {-webkit-transform: scaleX(.9); -moz-transform: scaleX(.9); -ms-transform: scaleX(.9); -o-transform: scaleX(.9); transform: scaleX(.9)}
+.MathJax_PHTML .noError {vertical-align: ; font-size: 90%; text-align: left; color: black; padding: 1px 3px; border: 1px solid}
+</style></head>
+<body class="nbviewer"><div id="MathJax_Message" style="display: none;"></div>
+  <div class="container container-main">
+    <div id="notebook">
+      <div id="notebook-container">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="项目：TMDb电影数据分析报告">项目：TMDb电影数据分析报告<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E9%A1%B9%E7%9B%AE%EF%BC%9ATMDb%E7%94%B5%E5%BD%B1%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%E6%8A%A5%E5%91%8A">¶</a></h1><h2 id="目录">目录<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E7%9B%AE%E5%BD%95">¶</a></h2><ul>
+<li><a href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#intro">简介</a></li>
+<li><a href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#wrangling">数据整理</a></li>
+<li><a href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#eda">探索性数据分析</a></li>
+<li><a href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#conclusions">结论</a></li>
+</ul><p><a id="intro"></a></p>
+<h2 id="简介">简介<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E7%AE%80%E4%BB%8B">¶</a></h2><p>TMDb电影数据集包含了 1960 年到 2015 年上映的大概一万部电影的信息，其中包括票房、电影名、演员、评分、电影风格等信息。对于电影的评分使用最多的就是TMDb评分。<br>
+要探索的问题有：</p>
+<ol>
+<li>评分在哪个分数段的电影最多？</li>
+<li>票房和评分之间有什么关系？</li>
+<li>评分最高的一百部电影的主要风格是什么？</li>
+<li>随着时间的推移，电影收入和数量是怎么变化的？</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">pandas</span> <span class="k">as</span> <span class="nn">pd</span>
+<span class="kn">from</span> <span class="nn">pandas</span> <span class="k">import</span> <span class="n">Series</span><span class="p">,</span> <span class="n">DataFrame</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="wrangling"></a></p>
+<h2 id="数据整理">数据整理<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E6%95%B0%E6%8D%AE%E6%95%B4%E7%90%86">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 加载数据并打印几行。进行这几项操作，来检查数据类型，以及是否有缺失数据或错误数据的情况。</span>
+<span class="n">movies_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">'/home/kesci/input/tmdb_movies3913/tmdb-movies.csv'</span><span class="p">)</span>
+<span class="n">movies_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+RangeIndex: 10866 entries, 0 to 10865
+Data columns (total 21 columns):
+id                      10866 non-null int64
+imdb_id                 10856 non-null object
+popularity              10866 non-null float64
+budget                  10866 non-null int64
+revenue                 10866 non-null int64
+original_title          10866 non-null object
+cast                    10790 non-null object
+homepage                2936 non-null object
+director                10822 non-null object
+tagline                 8042 non-null object
+keywords                9373 non-null object
+overview                10862 non-null object
+runtime                 10866 non-null int64
+genres                  10843 non-null object
+production_companies    9836 non-null object
+release_date            10866 non-null object
+vote_count              10866 non-null int64
+vote_average            10866 non-null float64
+release_year            10866 non-null int64
+budget_adj              10866 non-null float64
+revenue_adj             10866 non-null float64
+dtypes: float64(4), int64(6), object(11)
+memory usage: 1.7+ MB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="删除缺失值太多或对分析没有用的列">删除缺失值太多或对分析没有用的列<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E5%88%A0%E9%99%A4%E7%BC%BA%E5%A4%B1%E5%80%BC%E5%A4%AA%E5%A4%9A%E6%88%96%E5%AF%B9%E5%88%86%E6%9E%90%E6%B2%A1%E6%9C%89%E7%94%A8%E7%9A%84%E5%88%97">¶</a></h4><h4 id="删除对分析结果无关的列（该报告主要分析与电影评分相关的内容以及电影数量和票房随时间的变化情况）">删除对分析结果无关的列（该报告主要分析与电影评分相关的内容以及电影数量和票房随时间的变化情况）<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E5%88%A0%E9%99%A4%E5%AF%B9%E5%88%86%E6%9E%90%E7%BB%93%E6%9E%9C%E6%97%A0%E5%85%B3%E7%9A%84%E5%88%97%EF%BC%88%E8%AF%A5%E6%8A%A5%E5%91%8A%E4%B8%BB%E8%A6%81%E5%88%86%E6%9E%90%E4%B8%8E%E7%94%B5%E5%BD%B1%E8%AF%84%E5%88%86%E7%9B%B8%E5%85%B3%E7%9A%84%E5%86%85%E5%AE%B9%E4%BB%A5%E5%8F%8A%E7%94%B5%E5%BD%B1%E6%95%B0%E9%87%8F%E5%92%8C%E7%A5%A8%E6%88%BF%E9%9A%8F%E6%97%B6%E9%97%B4%E7%9A%84%E5%8F%98%E5%8C%96%E6%83%85%E5%86%B5%EF%BC%89">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">drop_columns</span> <span class="o">=</span> <span class="p">[</span><span class="s1">'imdb_id'</span><span class="p">,</span><span class="s1">'id'</span><span class="p">,</span><span class="s1">'overview'</span><span class="p">,</span><span class="s1">'runtime'</span><span class="p">,</span><span class="s1">'release_date'</span><span class="p">,</span><span class="s1">'tagline'</span><span class="p">,</span><span class="s1">'keywords'</span><span class="p">,</span>
+                <span class="s1">'production_companies'</span><span class="p">,</span><span class="s1">'budget_adj'</span><span class="p">,</span><span class="s1">'revenue_adj'</span><span class="p">,</span><span class="s1">'cast'</span><span class="p">,</span><span class="s1">'homepage'</span><span class="p">,</span><span class="s1">'director'</span><span class="p">]</span>
+<span class="n">movies_df</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">drop_columns</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="删除重复行和含有缺失值的行">删除重复行和含有缺失值的行<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E5%88%A0%E9%99%A4%E9%87%8D%E5%A4%8D%E8%A1%8C%E5%92%8C%E5%90%AB%E6%9C%89%E7%BC%BA%E5%A4%B1%E5%80%BC%E7%9A%84%E8%A1%8C">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 删除重复行</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movies_df</span><span class="o">.</span><span class="n">duplicated</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">())</span>
+<span class="n">movies_df</span><span class="o">.</span><span class="n">drop_duplicates</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>1
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 删除含有缺失值的行</span>
+<span class="n">movies_df</span><span class="o">.</span><span class="n">dropna</span><span class="p">(</span><span class="n">inplace</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="c1"># how='any'</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">movies_df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>(10842, 8)
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="移动-vote_average-列到第一的位置">移动 vote_average 列到第一的位置<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E7%A7%BB%E5%8A%A8-vote_average-%E5%88%97%E5%88%B0%E7%AC%AC%E4%B8%80%E7%9A%84%E4%BD%8D%E7%BD%AE">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vote_average</span> <span class="o">=</span> <span class="n">movies_df</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s1">'vote_average'</span><span class="p">)</span>
+<span class="n">movies_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">'vote_average'</span><span class="p">,</span> <span class="n">vote_average</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="对-vote_average-进行降序排序">对 vote_average 进行降序排序<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E5%AF%B9-vote_average-%E8%BF%9B%E8%A1%8C%E9%99%8D%E5%BA%8F%E6%8E%92%E5%BA%8F">¶</a></h4>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movies_df</span> <span class="o">=</span> <span class="n">movies_df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">"vote_average"</span><span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+<span class="n">movies_df</span><span class="o">.</span><span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">movies_df</span><span class="o">.</span><span class="n">index</span><span class="p">))</span>
+<span class="n">movies_df</span><span class="p">[:]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">1</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[7]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vote_average</th>
+      <th>popularity</th>
+      <th>budget</th>
+      <th>revenue</th>
+      <th>original_title</th>
+      <th>genres</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9.2</td>
+      <td>0.006925</td>
+      <td>0</td>
+      <td>0</td>
+      <td>The Story of Film: An Odyssey</td>
+      <td>Documentary</td>
+      <td>14</td>
+      <td>2011</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">movies_df</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
+Int64Index: 10842 entries, 0 to 10841
+Data columns (total 8 columns):
+vote_average      10842 non-null float64
+popularity        10842 non-null float64
+budget            10842 non-null int64
+revenue           10842 non-null int64
+original_title    10842 non-null object
+genres            10842 non-null object
+vote_count        10842 non-null int64
+release_year      10842 non-null int64
+dtypes: float64(2), int64(4), object(2)
+memory usage: 762.3+ KB
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="eda"></a></p>
+<h2 id="探索性数据分析">探索性数据分析<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E6%8E%A2%E7%B4%A2%E6%80%A7%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="1.-评分在哪个分数段的电影最多？">1. 评分在哪个分数段的电影最多？<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#1.-%E8%AF%84%E5%88%86%E5%9C%A8%E5%93%AA%E4%B8%AA%E5%88%86%E6%95%B0%E6%AE%B5%E7%9A%84%E7%94%B5%E5%BD%B1%E6%9C%80%E5%A4%9A%EF%BC%9F">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
+<span class="n">bins</span> <span class="o">=</span> <span class="p">[</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">8</span><span class="p">,</span><span class="mi">9</span><span class="p">]</span>
+<span class="n">bins</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'电影评分分布图'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">'15'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'vote_average'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'vote_number'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">hist</span><span class="p">(</span><span class="n">movies_df</span><span class="p">[</span><span class="s1">'vote_average'</span><span class="p">],</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">bins</span><span class="o">=</span><span class="n">bins</span><span class="p">);</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img src="./tmdb_files/1525589845151_704.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>由直方图可以看出大多数的电影评分都在5.5~7.0分之间，呈左偏态。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="2.-票房和评分之间有什么关系？">2. 票房和评分之间有什么关系？<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#2.-%E7%A5%A8%E6%88%BF%E5%92%8C%E8%AF%84%E5%88%86%E4%B9%8B%E9%97%B4%E6%9C%89%E4%BB%80%E4%B9%88%E5%85%B3%E7%B3%BB%EF%BC%9F">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 删除票房为0的列</span>
+<span class="n">revenue_df</span> <span class="o">=</span> <span class="n">movies_df</span><span class="p">[</span><span class="n">movies_df</span><span class="p">[</span><span class="s1">'revenue'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>评分是连续的值，所以需要把评分分组，创建类别。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 用于把数据“分割”成组的边缘数据</span>
+<span class="n">bin_edges</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mf">8.5</span><span class="p">,</span> <span class="mi">14</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="c1"># 对每个评分水平类别进行标签命名</span>
+<span class="n">bin_names</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="c1"># pandas.cut()根据这些值将该列进行拆分，创建 vote_levels 列</span>
+<span class="n">vote_levels</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">cut</span><span class="p">(</span><span class="n">revenue_df</span><span class="p">[</span><span class="s1">'vote_average'</span><span class="p">],</span> <span class="n">bin_edges</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="n">bin_names</span><span class="p">,</span> <span class="n">right</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">revenue_df</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">revenue_df</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span> <span class="s1">'vote_levels'</span><span class="p">,</span> <span class="n">vote_levels</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">revenue_df</span><span class="p">[</span><span class="s1">'vote_levels'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[12]:</div>
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>6.0    1204
+6.5    1007
+5.5     979
+7.0     553
+5.0     552
+4.5     232
+7.5     185
+4.0      68
+3.5      29
+8.0      28
+3.0      10
+2.0       2
+2.5       0
+Name: vote_levels, dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 根据vote_levels 列进行分组并求平均值</span>
+<span class="n">revenue_mean</span> <span class="o">=</span> <span class="n">revenue_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'vote_levels'</span><span class="p">)[</span><span class="s1">'revenue'</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span>
+<span class="n">vote_levels</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">13</span><span class="p">,</span> <span class="n">endpoint</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'vote_levels'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'revenue_mean'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'评分和票房关系图'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">'15'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">scatter</span><span class="p">(</span><span class="n">vote_levels</span><span class="p">,</span> <span class="n">revenue_mean</span><span class="p">,</span> <span class="n">c</span><span class="o">=</span><span class="s1">'r'</span><span class="p">,</span> <span class="n">s</span><span class="o">=</span><span class="mi">200</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img src="./tmdb_files/1525589845320_435.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>从散点图可以看出，评分和票房是呈正相关的关系。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="3.-评分最高的一百部电影的主要风格是什么？">3. 评分最高的一百部电影的主要风格是什么？<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#3.-%E8%AF%84%E5%88%86%E6%9C%80%E9%AB%98%E7%9A%84%E4%B8%80%E7%99%BE%E9%83%A8%E7%94%B5%E5%BD%B1%E7%9A%84%E4%B8%BB%E8%A6%81%E9%A3%8E%E6%A0%BC%E6%98%AF%E4%BB%80%E4%B9%88%EF%BC%9F">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vote_ranking</span> <span class="o">=</span> <span class="n">movies_df</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">100</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">vote_ranking</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
+
+<div class="output_html rendered_html output_subarea output_execute_result">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>vote_average</th>
+      <th>popularity</th>
+      <th>budget</th>
+      <th>revenue</th>
+      <th>original_title</th>
+      <th>genres</th>
+      <th>vote_count</th>
+      <th>release_year</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>9.2</td>
+      <td>0.006925</td>
+      <td>0</td>
+      <td>0</td>
+      <td>The Story of Film: An Odyssey</td>
+      <td>Documentary</td>
+      <td>14</td>
+      <td>2011</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>8.9</td>
+      <td>0.114264</td>
+      <td>0</td>
+      <td>0</td>
+      <td>The Mask You Live In</td>
+      <td>Documentary</td>
+      <td>11</td>
+      <td>2015</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>8.8</td>
+      <td>0.222293</td>
+      <td>0</td>
+      <td>0</td>
+      <td>Life Cycles</td>
+      <td>Documentary</td>
+      <td>27</td>
+      <td>2010</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">functools</span> <span class="k">import</span> <span class="n">reduce</span>
+<span class="n">genres_list</span> <span class="o">=</span> <span class="n">vote_ranking</span><span class="p">[</span><span class="s1">'genres'</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">'|'</span><span class="p">))</span>
+<span class="n">genres</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">(</span><span class="n">reduce</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">:</span> <span class="n">x</span><span class="o">+</span><span class="n">y</span><span class="p">,</span> <span class="n">genres_list</span><span class="p">))</span> <span class="c1"># 迭代列表求和</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">genres_counts</span> <span class="o">=</span> <span class="n">genres</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">15</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span><span class="mi">7</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'电影主要风格图'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">'15'</span><span class="p">)</span>
+<span class="c1"># plt.bar(genres_counts.index, genres_counts.values);</span>
+<span class="n">labels</span> <span class="o">=</span> <span class="n">genres_counts</span><span class="o">.</span><span class="n">index</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">pie</span><span class="p">(</span><span class="n">genres_counts</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">labels</span><span class="p">,</span> <span class="n">autopct</span><span class="o">=</span><span class="s1">'</span><span class="si">%1.1f%%</span><span class="s1">'</span><span class="p">);</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img src="./tmdb_files/1525589845724_64.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>高评分电影的主要风格有：Drama, Documentary, Music, Crime, Comedy。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>制作电影风格的云图</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">jieba</span>                      <span class="c1">#分词库</span>
+<span class="kn">from</span> <span class="nn">wordcloud</span> <span class="k">import</span> <span class="n">WordCloud</span>   <span class="c1">#词云库</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">genres_str</span> <span class="o">=</span> <span class="s2">"/"</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">genres</span><span class="o">.</span><span class="n">values</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 对分词后的文本生成词云</span>
+<span class="n">genres_wordcloud</span> <span class="o">=</span> <span class="n">WordCloud</span><span class="p">()</span><span class="o">.</span><span class="n">generate</span><span class="p">(</span><span class="n">genres_str</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'电影风格云图'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">'15'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">genres_wordcloud</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">"off"</span><span class="p">);</span> <span class="c1">#去掉x,y轴的刻度</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img src="./tmdb_files/1525589846046_539.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="4、随着时间的推移，电影收入和数量是怎么变化的？">4、随着时间的推移，电影收入和数量是怎么变化的？<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#4%E3%80%81%E9%9A%8F%E7%9D%80%E6%97%B6%E9%97%B4%E7%9A%84%E6%8E%A8%E7%A7%BB%EF%BC%8C%E7%94%B5%E5%BD%B1%E6%94%B6%E5%85%A5%E5%92%8C%E6%95%B0%E9%87%8F%E6%98%AF%E6%80%8E%E4%B9%88%E5%8F%98%E5%8C%96%E7%9A%84%EF%BC%9F">¶</a></h3>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 移除收入为0的列</span>
+<span class="n">revenue_df</span> <span class="o">=</span> <span class="n">movies_df</span><span class="p">[</span><span class="n">movies_df</span><span class="p">[</span><span class="s1">'revenue'</span><span class="p">]</span><span class="o">!=</span><span class="mi">0</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 统计每个年份的电影数量，并按照年份排序</span>
+<span class="n">movie_num</span> <span class="o">=</span> <span class="n">revenue_df</span><span class="p">[</span><span class="s1">'release_year'</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">sort_index</span><span class="p">()</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># 统计每个年份的电影收入</span>
+<span class="n">movie_revenue</span> <span class="o">=</span> <span class="n">revenue_df</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">'release_year'</span><span class="p">)</span><span class="o">.</span><span class="n">sum</span><span class="p">()[</span><span class="s1">'revenue'</span><span class="p">]</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'revenue'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'release_year'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'电影票房随时间的走势图'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">'14'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">movie_revenue</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'green'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">7</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">'number'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">'release_year'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">'电影数量随时间的走势图'</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="s1">'14'</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">movie_num</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="s1">'red'</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=.</span><span class="mi">7</span><span class="p">);</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span> <span class="c1"># 调整子图之间的距离</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+
+<div class="output_html rendered_html output_subarea ">
+<img src="./tmdb_files/1525589846587_778.png">
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>随着时间的推移，电影事业得到了巨大的发展，电影数量和收入都大大增加。</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><a id="conclusions"></a></p>
+<h2 id="结论">结论<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E7%BB%93%E8%AE%BA">¶</a></h2>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>经过对该电影数据集的分析，可以得到以下结论：</p>
+<ol>
+<li>随着时间的推移，电影获得了巨大发展，尤其是1990年之后，电影数量和票房增加迅速。</li>
+<li>电影评分和票房呈正相关关系，说明电影质量高，观众是愿意为其买单的。</li>
+<li>大多数电影的评分主要分布在5.5~7.0分之间，比较明显的正态分布。</li>
+<li>高评分的电影风格主要有Drama、Documentary、Music等。</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h4 id="局限性：">局限性：<a class="anchor-link" href="https://www.kesci.com/api/labs/5aedb8470739c42faa20f068/RenderedContent#%E5%B1%80%E9%99%90%E6%80%A7%EF%BC%9A">¶</a></h4><ol>
+<li>某些电影的评分次数太少（小于50），这使得电影评分很有可能不能真实反映出电影的质量水平；</li>
+<li>电影收入为零的无效数据太多（占一半多），降低了最后结果的可靠性；</li>
+</ol>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span> 
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div></div>
+    </div>
+  </div>
+
+<script src="./tmdb_files/bootstrap.min.js.下载"></script>
+<script src="./tmdb_files/headroom.min.js.下载"></script>
+<script src="./tmdb_files/jQuery.headroom.min.js.下载"></script>
+
+
+</body></html>
