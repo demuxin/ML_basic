@@ -38,6 +38,6 @@
 在Github上虽然能够直接加载ipynb文件，但是速度很慢，并且容易加载失败。利用[nbviewer](https://nbviewer.jupyter.org/) 可以快速加载ipynb文件。
 
 **如何使用：**
-1. 选择一个要打开的ipynb文件， 例如 https://github.com/feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb。
+1. 选择一个要打开的ipynb文件， 例如 https://github.com/feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb 。
 2. 截取其中的 feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb 部分。
-3. 添加至 https://nbviewer.jupyter.org/github/ 后面，最终得到 https://nbviewer.jupyter.org/github/feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb，打开连接即可。
+3. 添加至 https://nbviewer.jupyter.org/github/ 后面，最终得到 https://nbviewer.jupyter.org/github/feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb ，打开连接即可。
