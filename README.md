@@ -29,3 +29,15 @@
 
 **实战项目**：预测未来房价
 运用机器学习原理与基础统计分析工具针对房地产数据建立一个模型、评估模型的表现好坏并利用这个模型预测未来房价。
+
+
+-------
+
+## 解决Github加载ipynb文件缓慢/失败
+
+在Github上虽然能够直接加载ipynb文件，但是速度很慢，并且容易加载失败。利用[nbviewer](https://nbviewer.jupyter.org/) 可以快速加载ipynb文件。
+
+**如何使用：**
+1. 选择一个要打开的ipynb文件， 例如 https://github.com/feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb。
+2. 截取其中的 feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb 部分。
+3. 添加至 https://nbviewer.jupyter.org/github/ 后面，最终得到 https://nbviewer.jupyter.org/github/feying/ML_basic/blob/master/5.boston_housing/boston_housing.ipynb，打开连接即可。
